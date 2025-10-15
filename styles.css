@@ -1,0 +1,25 @@
+/* ...existing code... */
+#sponsorships {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#sponsorships .sponsors img {
+    max-width: 200px;
+    margin: 10px;
+}
+
+.sponsorship-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sponsorship-button:hover {
+    background-color: #0056b3;
+}
+/* ...existing code... */

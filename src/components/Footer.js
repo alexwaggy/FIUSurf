@@ -35,20 +35,6 @@ const Footer = () => {
               <Youtube size={28} />
             </a>
           </div>
-          <h4 className="text-xl font-bold mb-4">Newsletter</h4>
-          <form className="flex flex-col sm:flex-row gap-2">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="p-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 flex-grow"
-            />
-            <button
-              type="submit"
-              className="p-3 bg-blue-600 rounded-lg font-bold hover:bg-blue-700 transition-colors duration-300"
-            >
-              Subscribe
-            </button>
-          </form>
         </div>
       </div>
       <div className="mt-8 text-center text-gray-500 text-sm">

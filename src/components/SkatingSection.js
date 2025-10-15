@@ -62,6 +62,18 @@ const SkatingSection = () => {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-16 text-center"
         >
+            <h3 className="text-2xl font-bold mb-4">Become a Sponsor</h3>
+            <p className="text-white-600 mb-6">
+              Support our events and community by becoming a sponsor. Click the button below to learn more.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdrN7r6FSs3BJfQFvWudBjA8C-uN4MnLgUpBaTxHkwY3iIpVA/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
+            >
+              Become a Sponsor
+            </a>
         </motion.div>
       </div>
     </section>

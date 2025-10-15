@@ -23,7 +23,7 @@ const Navbar = () => {
     { name: 'Surfing', href: '#surfing' },
     { name: 'Trips', href: '#trips' },
     { name: 'Competitions', href: '#competitions' },
-    { name: 'Other', href: '#skating' } // This correctly points to skating section
+    { name: 'Sponsorships', href: '#skating' } // This correctly points to skating section
   ];
 
   const scrollToSection = (href) => {
@@ -108,18 +108,20 @@ const Navbar = () => {
               Merch
             </motion.button>
             
-            <motion.button
-              onClick={() => scrollToSection('#crew')} // Changed to #crew to scroll to group photo section
+            <motion.a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfiBjwcwiqWjNG6JABtm4GXLe4oDjTNi1nNIVM5u1l1eiQorQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-2 rounded-full font-semibold border-2 transition-all duration-200 ${
                 isScrolled
-                  ? 'border-stone-600 text-stone-600 hover:bg-stone-600 hover:text-white' // Fixed brown colors
+                  ? 'border-stone-600 text-stone-600 hover:bg-stone-600 hover:text-white'
                   : 'border-white text-white hover:bg-white hover:text-stone-600'
               }`}
             >
               Join Us
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
