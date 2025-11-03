@@ -67,7 +67,7 @@ const StripePricing = () => {
                 className="h-56 w-auto object-contain"
                 />
                 <h2 className="text-4xl md:text-5xl font-black text-gray-900 -ml-9">
-                MERCH
+                SHOP
                 </h2>
             </div>
             <p className="text-md md:text-lg text-gray-600 max-w-xl mx-auto">
