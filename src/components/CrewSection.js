@@ -58,11 +58,11 @@ const crewMembers = [
   },
   {
     id: 6,
-    name: 'Michelle',
-    role: 'Communications Director',
+    name: 'Alondra',
+    role: 'Performative Photographer',
     photo: '/images/crew/michelle.jpeg',
     description:
-      "Hey gang! My name is Michelle and I'm a senior double majoring in Marine Biology and Natural and Applied Sciences. I love surfing, rock climbing, and filming. If you see me, I'll probably have a camera in my hands.",
+      "Howdy! My name is Alondra and I’m an undergrad majoring in Marine Biology. When I’m not filming surfers in the water Im probably skating or studying for exams. Big chicken Joe fan, yew!!",
     funFact: 'Always filming 🎥',
   },
   {
