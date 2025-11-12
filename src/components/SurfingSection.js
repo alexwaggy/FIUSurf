@@ -1,66 +1,139 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const surfSpots = [
-  { name: 'Private lessons - Coming soon', image: '/images/surfing/south-beach.jpg' },
-  { name: 'Beginner group lessons', image: '/images/surfing/haulover-beach.jpg' },
-  { name: 'Weekly practices', image: '/images/surfing/dania-beach.jpg' },
+const skateContent = [
+  {
+    id: 1,
+    title: 'Skate Meetups',
+    description: "We organize regular sessions at Miami's best skate parks. Only Wednesdays",
+    image: '/images/skating/skate-meetup.jpg',
+  },
+  {
+    id: 2,
+    title: 'Social Events',
+    description: 'Hangouts, meetups, sport-events, trips and more. Get to know amazing people.',
+    image: '/images/skating/social1.jpeg',
+  },
+  {
+    id: 3,
+    title: 'Film Premieres',
+    description: 'Watch with us the latest surf videos, surf classics, edits and upcoming works.',
+    image: '/images/skating/939.png',
+  },
 ];
 
-const SurfingSection = () => {
+const sponsors = [
+  {
+    id: 1,
+    name: 'Sponsor 1',
+    image: '/images/skating/social1.jpeg',
+  },
+  {
+    id: 2,
+    name: 'Sponsor 2',
+    image: '/images/skating/social1.jpeg',
+  },
+  {
+    id: 3,
+    name: 'Sponsor 3',
+    image: '/images/skating/social1.jpeg',
+  },
+];
+
+const SkatingSection = () => {
   return (
-    <section id="surfing" className="relative py-20 bg-blue-50 overflow-hidden">
+    <section id="other-events" className="relative py-20 bg-gray-800 text-white overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl font-extrabold text-center text-gray-900 uppercase mb-12"
+          className="text-5xl font-extrabold text-center uppercase mb-12"
         >
-          Surfing
+          Other Events
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-          {surfSpots.map((spot, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {skateContent.map((item, index) => (
             <motion.div
-              key={spot.name}
+              key={item.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              className="bg-gray-900 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
             >
-              <img src={spot.image} alt={spot.name} className="w-full h-64 object-cover" />
+              <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900">{spot.name}</h3>
+                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <motion.h3
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7 }}
-            className="text-4xl font-bold text-gray-900 mb-6"
+        {/* Become a Sponsor Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="mt-16 text-center"
+        >
+          <h3 className="text-2xl font-bold mb-4">Become a Sponsor</h3>
+          <p className="text-gray-300 mb-6">
+            Support our events and community by becoming a sponsor. Click the button below to learn more.
+          </p>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdrN7r6FSs3BJfQFvWudBjA8C-uN4MnLgUpBaTxHkwY3iIpVA/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
           >
-            Learn to Surf with Us!
-          </motion.h3>
-          <motion.button
-            onClick={() => window.open('https://chat.whatsapp.com/your-whatsapp-group-link', '_blank')}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300"
-          >
-            Lessons
-          </motion.button>
-        </div>
+            Become a Sponsor
+          </a>
+        </motion.div>
+
+        {/* Sponsors Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">Our Sponsors</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            {sponsors.map((sponsor, index) => (
+              <motion.div
+                key={sponsor.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex justify-center"
+              >
+                <a
+                  href={sponsor.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+                >
+                  <img
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    className="w-full h-24 object-contain"
+                  />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default SurfingSection;
+export default SkatingSection;
