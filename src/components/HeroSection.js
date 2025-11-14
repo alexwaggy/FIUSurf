@@ -128,7 +128,7 @@ const HeroSection = () => {
         >
           <p className="text-white text-xl md:text-3xl font-light tracking-wide drop-shadow-2xl"
              style={{ textShadow: '0 0 30px rgba(14, 165, 233, 0.8), 0 2px 8px rgba(0,0,0,0.9)' }}>
-            RIDE THE WAVE OF ADVENTURE
+            RIDE THE WAVE WITH US
           </p>
           <motion.div
             animate={{ 
